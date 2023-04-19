@@ -3,11 +3,7 @@ FROM openjdk:21-slim-buster
 
 # Set the working directory to /app
 WORKDIR /app
-
 COPY . .
-
-# Create jar file
-RUN ./mvnw clean package
 
 # Copy the Spring Boot executable JAR file into the container at /app
 COPY target/myAwesomeProject-0.0.1-SNAPSHOT.jar /app
