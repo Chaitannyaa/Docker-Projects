@@ -1,6 +1,6 @@
-# Docker-Projects
+# Dockerfile-Creation-Projects
 
-Here you will find my deployment projects using docker containers.
+Here you will find different projects with Dockerfile to dockerize apps.
 
 Each project folder contains Dockerfile, App files and README.md.
 
