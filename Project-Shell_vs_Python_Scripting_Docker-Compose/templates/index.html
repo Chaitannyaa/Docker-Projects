@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vote for your favorite scripting language</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			background-color: #ADD8E6;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Vote for your favorite scripting language</h1>
+	<form method="post" action="/">
+		<input type="radio" name="language" value="Shell" id="shell">
+		<label for="shell">Shell scripting</label><br>
+		<input type="radio" name="language" value="Python" id="python">
+		<label for="python">Python scripting</label><br>
+		<input type="submit" value="Submit">
+	</form>
+	<h2>Current vote counts:</h2>
+	<ul>
+		<li>Shell scripting: {{ vote_counts['Shell'] }}</li>
+		<li>Python scripting: {{ vote_counts['Python'] }}</li>
+	</ul>
+</body>
+</html>
