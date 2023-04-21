@@ -4,15 +4,11 @@
 
 My First Capstone Project
 
-This project is made by me and Thigao Ponce we are creating website have a feuture that you can add your favourite books to a list
-
-## This is an image for it
+This project is made by Omar Ragheb and Thigao Ponce we are creating website have a feuture that you can add your favourite books to a list
 
 ## Live Demo
+
 [Live Demo Here](https://omar25ahmed.github.io/Awesome-books-plain-JavaScript-with-objects/)
-
-
-
 
 ## Built With
 
@@ -42,6 +38,7 @@ This project is made by me and Thigao Ponce we are creating website have a feutu
 - - GitHub: [@omar25ahmed](https://github.com/omar25ahmed)
 
 👤 **Thiago Ponce**
+
 - - GitHub: [Thi-Ponce](https://github.com/Thi-Ponce)
 
 
