@@ -6,12 +6,19 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - mysql
+      - mysql-container
+    environment:
+      DB_USER: root
+      DB_ROOT_PASSWORD: password
+      DB_DATABASE: votes
+      DB_HOST: mysql-container
     networks:
       - my_network
 
-  mysql:
+  mysql-container:
     image: mysql:latest
+    ports: 
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: votes

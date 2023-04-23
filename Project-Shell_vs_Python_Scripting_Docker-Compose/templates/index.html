@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vote for your favorite scripting language</title>
+	<title>Vote for your favorite programming language!</title>
 	<style>
 		body {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			margin: 0;
-			padding: 0;
-			background-color: #ADD8E6;
+			background-color: #f2f2f2;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
 		}
 		form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			margin-bottom: 20px;
+			margin: 50px auto;
+			width: 300px;
+			padding: 20px;
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="submit"] {
+			margin-top: 10px;
+			background-color: #4CAF50;
+			color: #ffffff;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		table {
+			margin: 50px auto;
+			border-collapse: collapse;
+			width: 300px;
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+		}
+		th, td {
+			padding: 10px;
+			border: 1px solid #cccccc;
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
-	<h1>Vote for your favorite scripting language</h1>
-	<form method="post" action="/">
-		<input type="radio" name="language" value="Shell" id="shell">
-		<label for="shell">Shell scripting</label><br>
-		<input type="radio" name="language" value="Python" id="python">
-		<label for="python">Python scripting</label><br>
-		<input type="submit" value="Submit">
+	<h1>Vote for your favorite Scripting language!</h1>
+	<form method="POST">
+		<label><input type="radio" name="language" value="Python" checked> Python</label>
+		<label><input type="radio" name="language" value="Shell"> Shell</label>
+		<input type="submit" value="Vote">
 	</form>
-	<h2>Current vote counts:</h2>
-	<ul>
-		<li>Shell scripting: {{ vote_counts['Shell'] }}</li>
-		<li>Python scripting: {{ vote_counts['Python'] }}</li>
-	</ul>
+	<table>
+		<tr>
+			<th>Language</th>
+			<th>Count</th>
+		</tr>
+		{% for language, count in vote_counts.items() %}
+		<tr>
+			<td>{{ language }}</td>
+			<td>{{ count }}</td>
+		</tr>
+		{% endfor %}
+	</table>
 </body>
 </html>
+
